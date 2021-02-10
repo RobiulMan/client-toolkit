@@ -3,24 +3,19 @@
 //all front size followed by golden ratio thoure 1.618 *
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-$fotnSize: 1em;
-body {
-  font-family: "Roboto", sans-serif;
+@mixin fontClass($font-s, $font-w, $letter-s) {
+  font-size: $font-s;
+  font-weight: $font-w;
+  letter-spacing: $letter-s;
 }
-
 h1 {
-  font-size: $fotnSize + 5;
-  font-weight: 300;
-  letter-spacing: -1.5px;
+  @include fontClass(6em, 300, -1.5px);
 }
 h2 {
-  font-size: $fotnSize + 2.75;
-  font-weight: lighter;
-  letter-spacing: -0.5px;
+  @include fontClass(3.75em, 300, -0.5px);
 }
 h3 {
-  font-size: $fotnSize + 2;
+  font-size: 3em;
   font-weight: normal;
   letter-spacing: 0px;
 }
@@ -32,7 +27,7 @@ h4 {
 }
 
 h5 {
-  font-size: $fotnSize + 0.5;
+  font-size: 1.5em;
   font-weight: normal;
   letter-spacing: 0px;
 }
@@ -40,4 +35,11 @@ p {
   font-size: 1em;
   font-weight: normal;
   letter-spacing: 0px;
+}
+button {
+  font-size: 0.875em;
+  font-weight: medium;
+  letter-spacing: 1.25px;
+}
+a {
 }
