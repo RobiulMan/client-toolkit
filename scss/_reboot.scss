@@ -3,11 +3,8 @@
 //all front size followed by golden ratio thoure 1.618 *
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@mixin fontClass($font-s, $font-w, $letter-s) {
-  font-size: $font-s;
-  font-weight: $font-w;
-  letter-spacing: $letter-s;
-}
+@import "mixin";
+
 h1 {
   @include fontClass(6em, 300, -1.5px);
 }
@@ -15,31 +12,20 @@ h2 {
   @include fontClass(3.75em, 300, -0.5px);
 }
 h3 {
-  font-size: 3em;
-  font-weight: normal;
-  letter-spacing: 0px;
+  @include fontClass(3em, 400, 0px);
 }
-
 h4 {
-  font-size: 2.125em;
-  font-weight: normal;
-  letter-spacing: 0.25px;
+  @include fontClass(2.125em, 400, 0.25px);
 }
 
 h5 {
-  font-size: 1.5em;
-  font-weight: normal;
-  letter-spacing: 0px;
+  @include fontClass(1.5em, 400, 0px);
 }
-p {
-  font-size: 1em;
-  font-weight: normal;
-  letter-spacing: 0px;
+p,
+a {
+  @include fontClass(1em, 400, 0px);
+  line-height: 1.5em;
 }
 button {
-  font-size: 0.875em;
-  font-weight: medium;
-  letter-spacing: 1.25px;
-}
-a {
+  @include fontClass(0.875em, 500, 1.25px);
 }

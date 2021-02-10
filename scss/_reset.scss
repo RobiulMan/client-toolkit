@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0px;
 }
 
 /* Remove default padding */
@@ -26,19 +27,23 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+  margin: 0px;
 }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
+
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  text-transform: uppercase;
 
   font-family: "Roboto", sans-serif;
 }
-
+.continer {
+  margin: auto 2em;
+}
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
